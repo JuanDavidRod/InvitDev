@@ -1,0 +1,74 @@
+<section>
+  <hgroup>
+    <h3>10.10.2024</h3>
+    <h2>Edwin</h2>
+    <span>&</span>
+    <h2>Laura</h2>
+  </hgroup>
+
+  <div>
+    <p>
+      "Aunque uno pueda ser vencido, dos pueden resistir. !La cuerda de tres
+      hilos no se rompe facilmente!"
+    </p>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  hgroup {
+    text-align: center;
+    background: linear-gradient(
+      to right,
+      var(--color-terceary) 30%,
+      var(--color-primary) 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h3 {
+    font-size: 25px;
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
+  h2 {
+    font-size: 80px;
+    line-height: 85px;
+  }
+  span {
+    font-size: 50px;
+    position: relative;
+    color: var(--color-complementary);
+    -webkit-text-fill-color: initial;
+  }
+  span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    width: 80px;
+    height: 1px;
+    left: 65px;
+    background: var(--color-terceary);
+  }
+  span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    width: 80px;
+    height: 1px;
+    right: 65px;
+    background: var(--color-terceary);
+  }
+
+  p {
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 20px;
+  }
+</style>

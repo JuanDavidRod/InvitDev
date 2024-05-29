@@ -1,0 +1,78 @@
+<section>
+  <div class="container_counter">
+    <h1>Falta</h1>
+    <div class="counter">
+      <div class="section_counter">
+        <span class="number">27</span>
+        <span class="caption">días</span>
+      </div>
+      <div class="section_counter">
+        <span class="number">03</span>
+        <span class="caption">hs</span>
+      </div>
+      <div class="section_counter">
+        <span class="number">52</span>
+        <span class="caption">Min</span>
+      </div>
+      <div class="section_counter">
+        <span class="number">43</span>
+        <span class="caption">Seg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    background: linear-gradient(
+      to right,
+      var(--color-terceary) 30%,
+      var(--color-primary) 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .container_counter {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 3px 6px 20px 0px #80808021;
+  }
+
+  .counter {
+    display: flex;
+    gap: 30px;
+    flex: 0.8;
+  }
+
+  .counter .section_counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .number {
+    font-size: 35px;
+    color: var(--color-primary);
+  }
+
+  .caption {
+    font-size: 18px;
+    color: var(--color-secondary);
+  }
+</style>
