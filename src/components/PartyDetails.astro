@@ -1,5 +1,6 @@
 ---
-
+import {Image} from 'astro:assets'
+import star from '../assets/star.svg'
 ---
 
 <section>
@@ -7,20 +8,108 @@
   <p>
     Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.
   </p>
-
-  <div>
-    <h2>Música</h2>
-    <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
-    <button> Sugerir Canción </button>
-  </div>
-  <div>
-    <h2>DRESS CODE</h2>
-    <p>Una orientación para tu vestuario</p>
-    <button> Ver Más </button>
-  </div>
-  <div>
-    <h2>TIPS Y NOTAS</h2>
-    <p>Información adicional para tener en cuenta</p>
-    <button> Información </button>
+  <div class="data_section">
+    <div class="info">
+      <h2>Música</h2>
+      <Image src={star} alt="Future icon"/>
+      <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
+      <button> Sugerir Canción </button>
+    </div>
+    <div class="info">
+      <h2>DRESS CODE</h2>
+      <Image src={star} alt="Future icon"/>
+      <p>Una orientación para tu vestuario</p>
+      <button> Ver Más </button>
+    </div>
+    <div class="info">
+      <h2>TIPS Y NOTAS</h2>
+      <Image src={star} alt="Future icon"/>
+      <p>Información adicional para tener en cuenta</p>
+      <button> Información </button>
+    </div>
   </div>
 </section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+    padding: 5px 20px;
+  }
+
+  .data_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .info {
+      background-color: var(--color-terceary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 35px;
+      width: 90%;
+      padding: 10px 5px;
+      border-radius: 20px;
+      p {
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+        color:#fff;
+      }
+
+      img {
+        width: 50%;
+        height: fit-content;
+        max-width: 200px;
+      }
+    }
+  }
+
+  h1 {
+    width: 100%;
+    margin: 0;
+    font-family: 'Fraunces Variable';
+    padding-bottom: 20px;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-complementary);
+    background: linear-gradient(
+      to right,
+      var(--color-terceary) 30%,
+      var(--color-primary) 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 25px;
+    color:#fff;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-terceary);
+  }
+
+  button {
+    width: 90%;
+    border: none;
+    color: var(--color-secondary);
+    background: #fff;
+    border-radius: 50px;
+    line-height: 15px;
+    font-size: 17px;
+    margin-top: 15px;
+    padding: 18px 30px;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s 0s ease;
+  }
+</style>

@@ -1,6 +1,13 @@
 <section>
   <h1>Retratos de Nuestro Amor</h1>
   <p>Un minuto, un segundo, un instante que queda en la eternidad</p>
+  <div class="carrousel">
+    {
+      Array.apply(null, Array(5)).map((e,i)=>(
+        <img alt={'img'+i} src="https://picsum.photos/200/300"/>
+      ))
+    }
+  </div>
 </section>
 
 <style>
@@ -10,9 +17,11 @@
     align-items: center;
   }
   h1 {
+    font-family: 'Be Vietnam Pro';
     margin: 0;
     padding-bottom: 20px;
-    font-size: 45px;
+    font-weight: 300;
+    font-size: 35px;
     line-height: 50px;
     text-align: center;
     background: linear-gradient(
@@ -27,5 +36,16 @@
     margin: 0;
     font-size: 19px;
     color: var(--color-primary);
+    text-align: center;
+  }
+
+  .carrousel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    margin: 12px 45px;
+    overflow-x: scroll;
+    scroll-padding-block: 5px;
   }
 </style>
