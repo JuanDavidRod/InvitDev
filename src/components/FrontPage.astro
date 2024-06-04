@@ -1,9 +1,22 @@
+---
+import { Image } from "astro:assets";
+import frontImage from "../assets/images/frontpage.jpg";
+import curvedimg from "../assets/images/curvedimg.png";
+import Flowers from "./ui/Flowers.astro";
+---
+
 <section>
+  <div class="frontPagePicture">
+    <Flowers align="left" />
+    <Flowers align="right" />
+    <Image class="frontImage" src={frontImage} alt="imagen portada" />
+    <Image class="curvedimg" src={curvedimg} alt="iamgen curva" />
+  </div>
   <hgroup>
     <h3>10.10.2024</h3>
-    <h2>Edwin</h2>
-    <span>&</span>
     <h2>Laura</h2>
+    <span>&</span>
+    <h2>Edwin</h2>
   </hgroup>
 
   <div>
@@ -20,6 +33,26 @@
     flex-direction: column;
     align-items: center;
   }
+  .frontPagePicture {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .frontImage {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    filter: brightness(60%);
+  }
+
+  .curvedimg {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+  }
+
   hgroup {
     text-align: center;
     background: linear-gradient(
@@ -31,13 +64,13 @@
     -webkit-text-fill-color: transparent;
   }
   h3 {
-    font-family: 'Fraunces Variable';
+    font-family: "Fraunces Variable";
     font-size: 25px;
     margin-bottom: 35px;
     margin-top: 0;
   }
   h2 {
-    font-family: 'Fraunces Variable';
+    font-family: "Fraunces Variable";
     font-size: 80px;
     line-height: 85px;
   }
