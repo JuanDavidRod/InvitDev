@@ -1,12 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import star from "../assets/star2.svg";
 ---
 
 <section>
   <h1>Regalos</h1>
   <p>Si deseas regalarnos algo más que tu hermosa presencia…</p>
-  <Image src={star} alt="Future icon" />
+  <img src={star.src} alt="Future icon" />
   <button> Ver Más </button>
 </section>
 
@@ -17,7 +16,7 @@ import star from "../assets/star2.svg";
     gap: 20px;
     margin-top: 20px;
     padding: 5px 20px;
-    
+
     align-items: center;
   }
 

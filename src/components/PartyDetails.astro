@@ -1,6 +1,5 @@
 ---
-import {Image} from 'astro:assets'
-import star from '../assets/star.svg'
+import star from "../assets/star.svg";
 ---
 
 <section>
@@ -11,19 +10,19 @@ import star from '../assets/star.svg'
   <div class="data_section">
     <div class="info">
       <h2>Música</h2>
-      <Image src={star} alt="Future icon"/>
+      <img src={star.src} alt="Future icon" />
       <p>¿Cuál es la canción que no debe faltar en la PlayList de la fiesta?</p>
       <button> Sugerir Canción </button>
     </div>
     <div class="info">
       <h2>DRESS CODE</h2>
-      <Image src={star} alt="Future icon"/>
+      <img src={star.src} alt="Future icon" />
       <p>Una orientación para tu vestuario</p>
       <button> Ver Más </button>
     </div>
     <div class="info">
       <h2>TIPS Y NOTAS</h2>
-      <Image src={star} alt="Future icon"/>
+      <img src={star.src} alt="Future icon" />
       <p>Información adicional para tener en cuenta</p>
       <button> Información </button>
     </div>
@@ -43,7 +42,7 @@ import star from '../assets/star.svg'
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     .info {
       background-color: var(--color-terceary);
       display: flex;
@@ -58,7 +57,7 @@ import star from '../assets/star.svg'
         width: 80%;
         text-align: center;
         font-size: 16px;
-        color:#fff;
+        color: #fff;
       }
 
       img {
@@ -72,7 +71,7 @@ import star from '../assets/star.svg'
   h1 {
     width: 100%;
     margin: 0;
-    font-family: 'Fraunces Variable';
+    font-family: "Fraunces Variable";
     padding-bottom: 20px;
     font-size: 45px;
     line-height: 50px;
@@ -90,7 +89,7 @@ import star from '../assets/star.svg'
   h2 {
     margin: 0;
     font-size: 25px;
-    color:#fff;
+    color: #fff;
   }
 
   p {

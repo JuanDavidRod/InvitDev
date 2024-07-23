@@ -1,12 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import flowers1 from "../../assets/images/flowers1.png";
 
 const { align } = Astro.props;
 ---
 
 <picture>
-  <Image class={align} src={flowers1} alt="flores de decoración" />
+  <img class={align} src={flowers1.src} alt="flores de decoración" />
 </picture>
 
 <style>

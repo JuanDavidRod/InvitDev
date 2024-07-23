@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import frontImage from "../assets/images/frontpage.jpg";
 import curvedimg from "../assets/images/curvedimg.png";
 import Flowers from "./ui/Flowers.astro";
@@ -9,8 +8,8 @@ import Flowers from "./ui/Flowers.astro";
   <div class="frontPagePicture">
     <Flowers align="left" />
     <Flowers align="right" />
-    <!-- <Image class="frontImage" src={frontImage} alt="imagen portada" />
-    <Image class="curvedimg" src={curvedimg} alt="iamgen curva" /> -->
+    <img class="frontImage" src={frontImage.src} alt="imagen portada" />
+    <img class="curvedimg" src={curvedimg.src} alt="iamgen curva" />
   </div>
   <hgroup>
     <h3>10.10.2024</h3>
