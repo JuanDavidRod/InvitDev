@@ -6,6 +6,8 @@ import Information from "../components/Information.astro";
 import CarrouselPage from "../components/CarrouselPage.astro";
 import PartyDetails from "../components/PartyDetails.astro";
 import GiftsPage from "../components/GiftsPage.astro";
+import FooterInnovativo from "../components/FooterInnovativo.astro";
+import FooterGeneral from "../components/FooterGeneral.astro";
 ---
 
 <Layout title="Invitacion Boda: Danny & Sofía">
@@ -27,22 +29,7 @@ import GiftsPage from "../components/GiftsPage.astro";
   </main>
 
   <footer>
-    <div>
-      <hgroup>
-        <h1>Danny</h1>
-        <span>&</span>
-        <h1>Sofía</h1>
-      </hgroup>
-      <ul>
-        <li><a href="">Confirmar asistencia a ceremonia</a></li>
-        <li><a href="">Confirmar asistencia a celebración</a></li>
-        <li><a href="">Sugerir canción</a></li>
-        <li><a href="">Guardar fecha celebración</a></li>
-        <li><a href="">Guardar fecha Ceremonia</a></li>
-      </ul>
-    </div>
-    <div>
-      <span>Desarrollado con 💖 por <a href="">xxxxxx</a></span>
-    </div>
+    <FooterGeneral data={page.footers} />
+    <FooterInnovativo />
   </footer>
 </Layout>
